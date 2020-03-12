@@ -35,9 +35,8 @@ def findSplitIndex(charLim, string, splitList):
 def writeScript(splitString,script):
     script.write('#NoEnv \n; #Warn \nSendMode Input \nSetWorkingDir %A_ScriptDir%\n^!+w:: \n{\n\t')
     for i in range(len(splitString)):
-        script.write("SendRaw," + splitString[i] + '\n\tSleep, 1000 \n\tSend, {Enter} \n\tSleep, 1000 \n\tSend, {Enter} \n\t')
+        script.write("SendRaw," + splitString[i] + '\n\tSleep, 1000 \n\tSend, {Enter} \n\tSleep, 1000 \n\tSend, {Enter} \n\tSleep, 1000 \n\t')
     script.write("\n}")
-    script.close()
     return
 
 
@@ -51,3 +50,4 @@ charLim = 255
 findSplitIndex(charLim, phrase, splitString)
 print(splitString)
 writeScript(splitString, ahkScript)
+ahkScript.close
