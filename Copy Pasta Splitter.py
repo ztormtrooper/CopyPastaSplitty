@@ -41,7 +41,7 @@ def writeScript(splitString,script):
 
 
 splitString = []
-ahkScript = open(r"C:\Users\Kacper\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\CopyPastaMacro.ahk", "w")
+ahkScript = open(r"path", "w")
 charLimDict = {'hots': 255, 'blah': 100}
 
 phrase = str(input("Please enter some text."))
